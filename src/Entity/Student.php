@@ -94,15 +94,30 @@ class Student
         return $this;
     }
 
-    public function getAddress()
+    public function getAddress(): Address
     {
         return $this->address;
     }
 
-    public function setAddress($address): self
+    public function setAddress(Address $address): self
     {
         $this->address = $address;
 
         return $this;
     }
+
+
+    /*
+        $user = new User;
+        $user->setName('Mr.Right');
+        $em->persist($user);
+        $em->flush();
+        [14:26]
+        $post->comments()->save($comment);
+
+        $post->refresh();
+
+        // All comments, including the newly saved comment...
+        $post->comments;
+     */
 }
